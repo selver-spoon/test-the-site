@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime News</title>
+  <style>
+    /* CSS styles */
+
+/* Reset some default styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Header and nav Styles */
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav {
+    background-color: #0060af;
+    padding: 10px;
+    text-align: center;
+  }
+  
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+/* Main Content Styles */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1 {
+  margin-top: 0;
+}
+
+/* Category Select Styles */
+.category-select select {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  background-color: aqua;
+  margin-left: 25%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* News Item Styles */
+.news-item {
+  flex-basis: calc(50% - 20px);
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.news-item img {
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.news-content {
+  flex-grow: 1;
+}
+
+.news-item h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.news-item p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Button Styles */
+.button {
+  background-color: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 80%;
+}
+
+.button:hover {
+  background-color: #002244;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  main {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .news-item {
+  flex-basis: calc(50% - 20px);
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: block;
+  align-items: center;
+}
+
+  .news-item img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    margin-left: 0;
+    width: auto;
+  }
+}
+
+  </style>
+  <script>
+    // JavaScript code
+
+function filterNews() {
+  var category = document.getElementById("category-select").value;
+  var newsItems = document.getElementsByClassName("news-item");
+
+  for (var i = 0; i < newsItems.length; i++) {
+    var newsItem = newsItems[i];
+    var newsCategory = newsItem.getAttribute("data-category");
+
+    if (category === "" || newsCategory === category) {
+      newsItem.style.display = "flex";
+    } else {
+      newsItem.style.display = "none";
+    }
+  }
+}
+
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo"onclick="location.href='test.html';" style="cursor: pointer;">
+      <img src="38c0745123322dc9b89ad1a44a218db5.jpg" alt="Logo">
+    </div>
+    <div></div>
+    
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index1.html">Anime List</a>
+    <a href="index2.html">Film List</a>
+    <a href="index3.html">News</a>
+  </nav>
+
+  <main>
+    <div class="category-select">
+      <select id="category-select" onchange="filterNews()">
+        <option value="">All Categories</option>
+        <option value="anime">Anime</option>
+        <option value="manga">Manga</option>
+        <option value="events">Events</option>
+      </select>
+    </div>
+
+    <div class="news-container">
+      <div class="news-item" data-category="anime">
+        <img src="https://a.storyblok.com/f/178900/640x960/b25c371511/rent-a-girlfriend-season-3-key-art-640px.png/m/filters:quality(95)format(webp)" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>Rent-a-Girlfriend Season 3</h3>
+          <p>يبدأ Kazuya في إنتاج فيلم مع Chizuru ، وعندما تبدأ الأمور في الاقتراب ، تدخل صديقة جديدة في هذا المزيج!</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>
+
+      <div class="news-item" data-category="anime">
+        <img src="https://a.storyblok.com/f/178900/1064x1596/4895406279/reborn-as-a-vending-machine-i-now-wander-the-dungeon-key-art.png/m/filters:quality(95)format(webp)" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>Reborn as a Vending Machine, I Now Wander the Dungeon</h3>
+          <p>إن آلة البيع هذه التي تحولت إلى إنسان متجسد جاهزة لخدمتك مغامرة جديدة كاملة وربما علبة صودا أيضًا!</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>
+      <div class="news-item" data-category="anime">
+        <img src="https://a.storyblok.com/f/178900/1064x1596/2caeab81fc/am-i-actually-the-strongest-key-art.png/m/filters:quality(95)format(webp)" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>Am I Actually the Strongest?</h3>
+          <p>إعادة تولد شخص معزول كطفل يتم منحه ألف مرة كمية طاقة سحرية، ولا أحد يعلم بذلك!</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>
+
+      <div class="news-item" data-category="anime">
+        <img src="https://a.storyblok.com/f/178900/1064x1505/bd1879111f/atelier-ryza-ever-darkness-the-secret-hideout-the-animation-key-visual.png/m/filters:quality(95)format(webp)" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>Atelier Ryza: Ever Darkness & the Secret Hideout The Animation</h3>
+          <p>استنادًا إلى لعبة الفيديو، تهرب رايزا من حياتها في القرية بحثًا عن أصدقاء جدد ومغامرات!</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>      <div class="news-item" data-category="anime">
+        <img src="https://a.storyblok.com/f/178900/1064x1596/f1b638b298/bungo-stray-dogs-season-5.png/m/filters:quality(95)format(webp)" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>Bungo Stray Dogs Season 5</h3>
+          <p>وكالة المحققين المسلحين تدافع عن نفسها بينما يقترب زعيم تينجين غوشوي!</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>
+
+      <div class="news-item" data-category="manga">
+        <img src="https://a.storyblok.com/f/178900/1920x1080/a9c0d44f85/azuki-one-peace-top.jpeg/m/filters:quality(95)format(webp)" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>Azuki Adds 23 New Manga Titles and One-Shots</h3>
+          <p>Digital manga service Azuki announced the addition of 23 new manga titles and one-shots, including series from One Peace Books, Media Do International, Inc. and MediBang!. All 10 series and 13 one-shots are available now along with select free chapters via the Azuki website and the iOS and Android apps.</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>      <div class="news-item" data-category="manga">
+        <img src="https://a.storyblok.com/f/178900/640x308/128e33befb/haven-t-you-heard-i-m-sakamoto-header.jpg/m/filters:quality(95)format(webp)" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>Haven't You Heard? I'm Sakamoto Manga Creator Nami Sano Passes Away at 36</h3>
+          <p>أعلنت إدارة التحرير في مجلة Harta التابعة لشركة Kadokawa على حساب المجلة في تويتر أن خالق مانغا ألم تسمع؟ أنا Sakamoto ، نامي سانو ، توفي في الخامس من أغسطس بسبب مرض السرطان عن عمر يناهز 36 العام. أُقيمت جنازة سانو في السابع والثامن من أغسطس.</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>
+
+      <div class="news-item" data-category="anime">
+        <img src="anime3.jpg" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>News Title</h3>
+          <p>News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>      <div class="news-item" data-category="manga">
+        <img src="anime1.jpg" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>News Title</h3>
+          <p>News description...</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>
+
+      <div class="news-item" data-category="anime">
+        <img src="anime3.jpg" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>News Title</h3>
+          <p>News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>      <div class="news-item" data-category="manga">
+        <img src="anime1.jpg" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>News Title</h3>
+          <p>News description...</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>
+
+      <div class="news-item" data-category="anime">
+        <img src="anime3.jpg" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>News Title</h3>
+          <p>News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>      <div class="news-item" data-category="manga">
+        <img src="anime1.jpg" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>News Title</h3>
+          <p>News description...</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>
+
+      <div class="news-item" data-category="anime">
+        <img src="anime3.jpg" alt="News Image"loading="lazy">
+        <div class="news-content">
+          <h3>News Title</h3>
+          <p>News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...News description and aim so good for that big price...</p>
+          <div class="button" onclick="location.href='https://www.crunchyroll.com/news/seasonal-lineup/2023/6/21/crunchyroll-summer-2023-new-anime-season';" style="cursor: pointer;">Read More</div>
+        </div>
+      </div>
+
+      
+      <!-- Add more news items here -->
+      
+    </div>
+  </main>
+</body>
+</html>
+

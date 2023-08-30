@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #003366;
+    }
+    
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    nav {
+      background-color: #0060af;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    
+    main {
+     max-width: 1110px;
+     margin: 20px auto;
+     padding: 20px;
+     background-color: #00869e;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      margin-top: 0;
+    }
+    
+    .anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-gap: 5px;
+}
+
+    
+    .anime-item {
+  border: 2px solid #918d88;
+  background-color: #034c58;
+  padding: 0px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.anime-item img  {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+
+.anime-item h3 {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+  margin-top: 0%;
+}
+
+.anime-item .description {
+  display: none;
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  background-color: #657a7e;
+  color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: small;
+  opacity: 0;
+  transition: opacity 0.3s, bottom 0.3s;
+}
+
+.anime-item:hover .description {
+  display: block;
+  opacity: 1;
+  bottom: 100%;
+}
+
+.anime-item .description::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #657a7e;
+}
+
+
+@keyframes slideUp {
+  from {
+    bottom: -10%;
+  }
+  to {
+    bottom: 30%;
+  }
+}
+.my-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 45%;
+  margin-top: 5px;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 23px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
+
+
+.anime-item:hover .description {
+  animation: slideUp 0.3s forwards;
+}
+
+    footer {
+      background-color: #0060af;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+ 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anime World</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="anime copmplate the info and links/index1.html">Anime List</a>
+    <a href="movis all info and links/index2.html">Film List</a>
+    <a href="index3.html">News</a>
+  </nav>
+
+  <main>
+    <section id="anime">
+      <h2>Featured Anime</h2>
+      <div class="anime-grid">
+        <div class="anime-item">
+          <img loading="lazy" src="anime1.jpg" alt="Anime 1">
+          <h3>Anime 1 hi my name is hicham</h3>
+          <h3> <img loading="lazy" src="star_786766.png" style="width: 20px;"> 7.5 <div class="button">done</div></h3>
+          <p class="description">Description of Animelj qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1</p>
+        </div>
+        <div class="anime-item">
+          <img loading="lazy" src="anime2.jpg" alt="Anime 2">
+          <h3>Anime 2</h3>
+          <p class="description">Description of Anime 2</p>
+        </div>
+        <div class="anime-item">
+          <img loading="lazy" src="anime3.jpg" alt="Anime 3">
+          <h3>Anime 3</h3>
+          <p class="description">Description of Anime 3</p>
+        </div>
+        <div class="anime-item">
+            <img loading="lazy" src="anime1.jpg" alt="Anime 1">
+            <h3>Anime 1</h3>
+            <p class="description">Description of Animelj qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime2.jpg" alt="Anime 2">
+            <h3>Anime 2</h3>
+            <p class="description">Description of Anime 2</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime3.jpg" alt="Anime 3">
+            <h3>Anime 3</h3>
+            <p class="description">Description of Anime 3</p>
+          </div><div class="anime-item">
+            <img loading="lazy" src="anime1.jpg" alt="Anime 1">
+            <h3>Anime 1</h3>
+            <p class="description">Description of Animelj qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime2.jpg" alt="Anime 2">
+            <h3>Anime 2</h3>
+            <p class="description">Description of Anime 2</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime3.jpg" alt="Anime 3">
+            <h3>Anime 3</h3>
+            <p class="description">Description of Anime 3</p>
+          </div><div class="anime-item">
+            <img loading="lazy" src="anime1.jpg" alt="Anime 1">
+            <h3>Anime 1</h3>
+            <p class="description">Description of Animelj qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime2.jpg" alt="Anime 2">
+            <h3>Anime 2</h3>
+            <p class="description">Description of Anime 2</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime3.jpg" alt="Anime 3">
+            <h3>Anime 3</h3>
+            <p class="description">Description of Anime 3</p>
+          </div>
+      </div>
+      <button class="my-button">Click me</button>
+      <div class="star"></div>
+      <h2>Anime mabey you lake it</h2>
+      <div class="anime-grid">
+        <div class="anime-item">
+          <img loading="lazy" src="anime1.jpg" alt="Anime 1">
+          <h3>Anime 1 hi my name is hicham</h3>
+          <h3> <img loading="lazy" src="star_786766.png" style="width: 20px;"> 7.5 <div class="button">done</div></h3>
+          <p class="description">Description of Animelj qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1</p>
+        </div>
+        <div class="anime-item">
+          <img loading="lazy" src="anime2.jpg" alt="Anime 2">
+          <h3>Anime 2</h3>
+          <p class="description">Description of Anime 2</p>
+        </div>
+        <div class="anime-item">
+          <img loading="lazy" src="anime3.jpg" alt="Anime 3">
+          <h3>Anime 3</h3>
+          <p class="description">Description of Anime 3</p>
+        </div>
+        <div class="anime-item">
+            <img loading="lazy" src="anime1.jpg" alt="Anime 1">
+            <h3>Anime 1</h3>
+            <p class="description">Description of Animelj qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime2.jpg" alt="Anime 2">
+            <h3>Anime 2</h3>
+            <p class="description">Description of Anime 2</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime3.jpg" alt="Anime 3">
+            <h3>Anime 3</h3>
+            <p class="description">Description of Anime 3</p>
+          </div><div class="anime-item">
+            <img loading="lazy" src="anime1.jpg" alt="Anime 1">
+            <h3>Anime 1</h3>
+            <p class="description">Description of Animelj qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime2.jpg" alt="Anime 2">
+            <h3>Anime 2</h3>
+            <p class="description">Description of Anime 2</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime3.jpg" alt="Anime 3">
+            <h3>Anime 3</h3>
+            <p class="description">Description of Anime 3</p>
+          </div><div class="anime-item">
+            <img loading="lazy" src="anime1.jpg" alt="Anime 1">
+            <h3>Anime 1</h3>
+            <p class="description">Description of Animelj qsgfsduygc uysdgcuy sdbcuowq xucisqf udycgt yustfsd trsqed zetbze fdbgy  1</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime2.jpg" alt="Anime 2">
+            <h3>Anime 2</h3>
+            <p class="description">Description of Anime 2</p>
+          </div>
+          <div class="anime-item">
+            <img loading="lazy" src="anime3.jpg" alt="Anime 3">
+            <h3>Anime 3</h3>
+            <p class="description">Description of Anime 3</p>
+          </div>
+      </div>
+      <button class="my-button">Click me</button>
+      <div class="star"></div>
+
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Anime World. All rights reserved.</p>
+  </footer>
+</body>
+</html>
